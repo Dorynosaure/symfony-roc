@@ -47,7 +47,7 @@ final class CategoryFactory extends ModelFactory
     protected function getDefaults(): array
     {
         return [
-            'name' => self::faker()->text(64),
+            'name' => mb_convert_case(self::faker()->word(), MB_CASE_TITLE, 'UTF-8'),
             'nbPeople' => self::faker()->randomNumber(),
         ];
     }
