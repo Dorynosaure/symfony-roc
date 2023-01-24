@@ -4,9 +4,15 @@
         <meta charset="UTF-8">
         <title>{% block title %}{% endblock %}</title>
         {% block stylesheets %}
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Syne">
         {% endblock %}
         {% block javascripts %}
         {% endblock %}
+        <style>
+            html {
+                font-family: "Syne", sans-serif;
+            }
+        </style>
     </head>
     <body>
         {% block body %}{% endblock %}
