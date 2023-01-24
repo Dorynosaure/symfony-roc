@@ -1,20 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
-
+{% block title %}Accueil{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Syne">
+    <link href="{{ asset('css/homeIndex.css') }}" rel='stylesheet' >
+{% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="header">
+        <img src="{{ asset('img/header.png') }}" alt=""/>
+    </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <div class="about">
+        <div class="about_line">
+            <div>
+                <div class="about_text">
+                    <h1>À propos du club</h1>
+                    <div>Le ROC (Rugby Olympique Charleville) a son école de rugby labellisée FRR depuis le 1/07/2019.</div>
+                </div>
+                <div class="about_button">
+                    <a href="{{ path('app_home_moreAboutEDR') }}"><img src="{{ asset('img/Sans titre-4.png') }}"/></a>
+                </div>
+            </div>
+            <img class='about_img' src="{{ asset('img/ffrlabel1etoile.png') }}" alt="étoile ffr"/>
+        </div>
+    </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/axelr/Documents/ROC/symfony-roc/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/axelr/Documents/ROC/symfony-roc/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <div class="about">
+        <div class="about_line">
+            <div>
+                <div class="about_text">
+                    <h1>À propos du groupe compétiton</h1>
+                    <div>Les -14 et son groupe compétition (U16, U19 et séniors) sont regroupé sous les couleurs de l’entente Ardennes.</div>
+                </div>
+                <div class="about_button">
+                    <a href=""><button>En savoir plus sur l'entente Ardennes</button></a>
+                </div>
+            </div>
+            <img class="about_img" src="{{ asset('img/logoArdennes.png') }}"/>
+        </div>
+    </div>
+
 {% endblock %}
