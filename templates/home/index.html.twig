@@ -7,37 +7,38 @@
 {% endblock %}
 {% block body %}
     <div class="header">
-        <img src="{{ asset('img/header.png') }}" alt=""/>
+        <img class="habillage" src="{{ asset('img/header.png') }}" alt=""/>
     </div>
-
     <div class="about">
-        <div class="about_line">
-            <div>
-                <div class="about_text">
-                    <h1>À propos du club</h1>
-                    <div>Le ROC (Rugby Olympique Charleville) a son école de rugby labellisée FRR depuis le 1/07/2019.</div>
-                </div>
-                <div class="about_button">
-                    <a href="{{ path('app_home_moreAboutEDR') }}"><img src="{{ asset('img/Sans titre-4.png') }}"/></a>
-                </div>
+        <div class="text">
+            <div class="text_roc">
+                <h1>À propos du club</h1>
+                <p>Le ROC (Rugby Olympique Charleville) a son école de rugby labellisée FRR depuis le 1/07/2019.</p>
+                <a class="button" href="{{ path('app_home_moreAboutEDR') }}"><img src="{{ asset('img/Sans titre-4.png') }}"/></a>
             </div>
-            <img class='about_img' src="{{ asset('img/ffrlabel1etoile.png') }}" alt="étoile ffr"/>
+        </div>
+        <div class="images">
+            <img src="{{ asset('img/ffrlabel1etoile.png') }}" alt="étoile ffr"/>
+        </div>
+    </div>
+    <img class="habillage" src="{{ asset('img/middle.png') }}"/>
+    <div class="about">
+        <div class="text">
+            <div class="text_ardennes">
+                <h1>À propos du groupe compétiton</h1>
+                <p>Les -14 et son groupe compétition (U16, U19 et séniors) sont regroupé sous les couleurs de l’entente Ardennes.</p>
+                <a class="button" href=""><img src="{{ asset('img/Sans titre-1.png') }}"/></a>
+            </div>
+        </div>
+        <div class="images">
+            <img src="{{ asset('img/logoArdennes.png') }}"/>
         </div>
     </div>
 
-    <div class="about">
-        <div class="about_line">
-            <div>
-                <div class="about_text">
-                    <h1>À propos du groupe compétiton</h1>
-                    <div>Les -14 et son groupe compétition (U16, U19 et séniors) sont regroupé sous les couleurs de l’entente Ardennes.</div>
-                </div>
-                <div class="about_button">
-                    <a href=""><button>En savoir plus sur l'entente Ardennes</button></a>
-                </div>
-            </div>
-            <img class="about_img" src="{{ asset('img/logoArdennes.png') }}"/>
-        </div>
-    </div>
+
+
+
+
+
 
 {% endblock %}

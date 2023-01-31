@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Syne">
         {% block stylesheets %}
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Syne">
         {% endblock %}
         {% block javascripts %}
         {% endblock %}
@@ -15,6 +16,17 @@
         </style>
     </head>
     <body>
+        {# <nav class="navbar">
+            <img class="logo" src="{{ asset('img/logoroc.png') }}"/>
+            <div class="nav-links">
+                <uL>
+                    <li><a href="{{ path('app_home') }}">Acceuil</a></li>
+                </uL>
+            </div>
+        </nav>
+        <header></header>
+
+    </body>  #}
         {% block body %}{% endblock %}
     </body>
 </html>
